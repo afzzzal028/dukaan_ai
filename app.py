@@ -102,6 +102,18 @@ label[data-testid="stRadioOption"]:hover > div > div:first-child {
 [data-testid="stDateInputField"], [data-testid="stDateInputFieldsScroller"] {
     background: #FFFFFF !important;
 }
+/* input text stays dark even if a dark browser theme sneaks in */
+[data-testid="stTextInput"] input, [data-testid="stTextArea"] textarea,
+[data-baseweb="base-input"] input, [data-baseweb="base-input"] textarea,
+[data-testid="stNumberInput"] input, [data-testid="stDateInputField"] input,
+[data-testid="stSelectbox"] input {
+    color: #202923 !important;
+    caret-color: #176B45 !important;
+}
+[data-testid="stTextInput"] input::placeholder,
+[data-testid="stTextArea"] textarea::placeholder {
+    color: #6B7268 !important; opacity: 1;
+}
 
 /* row card flattened when wrapped in bordered container */
 .trow.flat {
